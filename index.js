@@ -42,6 +42,7 @@ function descendingOrder(n) {
   let a = n
     .toString()
     .split("")
+    .sort()
     .reverse()
     .join("");
   let b = Number(a);
@@ -49,5 +50,5 @@ function descendingOrder(n) {
   return b;
 }
 
-descendingOrder(123498988);
-// Expected: 2110, instead got: 1201 - не проходит только этот тест. Оставлю на потом
+descendingOrder(1012);
+// Expected: 2110, instead got: 1201 -ура! тест прошел:)
