@@ -128,3 +128,50 @@ function highAndLow(numbers) {
   console.log(result);
 }
 highAndLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6");
+
+// Given two integers a and b, which can be positive or negative,
+//  find the sum of all the numbers between including them too and return it. If the two numbers are equal return a or b.
+
+// Note: a and b are not ordered!
+
+// Examples
+// GetSum(1, 0) == 1   // 1 + 0 = 1
+// GetSum(1, 2) == 3   // 1 + 2 = 3
+// GetSum(0, 1) == 1   // 0 + 1 = 1
+// GetSum(1, 1) == 1   // 1 Since both are same
+// GetSum(-1, 0) == -1 // -1 + 0 = -1
+// GetSum(-1, 2) == 2  // -1 + 0 + 1 + 2 = 2
+
+function GetSum(a, b) {
+  //Good luck!
+  if (a === b) {
+    return a;
+    console.log("a = b");
+  }
+  if (a < b) {
+    let element = 0;
+    console.log("a < b");
+
+    for (index = a; index <= b; index++) {
+      element = element + index;
+    }
+    return element;
+    console.log(element);
+    console.log("a < b");
+  } else {
+    console.log("a > b");
+
+    let element = 0;
+    for (index = b; index <= a; index++) {
+      element = element + index;
+      console.log(element, index);
+    }
+    return element;
+    console.log("a > b");
+
+    console.log(element);
+  }
+}
+
+console.log(GetSum(-1, 2));
+console.log(GetSum(535, 418));
