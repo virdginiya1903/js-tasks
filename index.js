@@ -25,3 +25,29 @@ function divisors(integer) {
 divisors(14);
 divisors(13);
 divisors(25);
+
+// Your task is to make a function that can take any non-negative integer
+// as a argument and return it with its digits in descending order. Essentially,
+// rearrange the digits to create the highest possible number.
+
+// Examples:
+// Input: 21445 Output: 54421
+
+// Input: 145263 Output: 654321
+
+// Input: 1254859723 Output: 9875543221
+function descendingOrder(n) {
+  //...
+
+  let a = n
+    .toString()
+    .split("")
+    .reverse()
+    .join("");
+  let b = Number(a);
+  console.log(n, a, b);
+  return b;
+}
+
+descendingOrder(123498988);
+// Expected: 2110, instead got: 1201 - не проходит только этот тест. Оставлю на потом
