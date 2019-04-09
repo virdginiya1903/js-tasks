@@ -204,3 +204,34 @@ function getCount(str) {
 }
 
 getCount("abracadabra");
+
+// Convert number to reversed array of digits
+// Given a random number:
+
+// C#: long;
+// C++: unsigned long;
+// You have to return the digits of this number within an array in reverse order.
+
+function digitize(n) {
+  //code here
+  let digitizeStr = String(n);
+  let digitizeArr = [...digitizeStr];
+  // console.log(digitizeArr);
+  let digitizeRes = digitizeArr.reverse().map(Number);
+  // console.log(digitizeRes);
+  return digitizeRes;
+}
+digitize(35231);
+
+// второй вариант более продвинутый и легкий
+
+function digitize2(n) {
+  let digitizeRes = n
+    .toString()
+    .split("")
+    .reverse()
+    .map(Number);
+  console.log(digitizeRes);
+  return digitizeRes;
+}
+digitize2(35231);
