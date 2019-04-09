@@ -174,4 +174,33 @@ function GetSum(a, b) {
 }
 
 console.log(GetSum(-1, 2));
-console.log(GetSum(535, 418));
+console.log(GetSum(5, 2));
+
+function getCount(str) {
+  var vowelsCount = 0;
+
+  // enter your majic here
+
+  return vowelsCount;
+}
+
+//Return the number (count) of vowels in the given string.
+
+//We will consider a, e, i, o, and u as vowels for this Kata.
+
+//The input string will only consist of lower case letters and/or spaces.
+function getCount(str) {
+  let vowelsCount = 0;
+  let getCountArrA = ["a", "e", "i", "o", "u"];
+  let getCountArrB = [...str];
+  // enter your majic here
+  // console.log(getCountArrB);
+  let arrRes = getCountArrB.filter(it => getCountArrA.includes(it));
+  // return vowelsCount;
+  // console.log(arrRes);
+  vowelsCount = arrRes.length;
+  return vowelsCount;
+  // console.log(vowelsCount);
+}
+
+getCount("abracadabra");
