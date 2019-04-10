@@ -235,3 +235,12 @@ function digitize2(n) {
   return digitizeRes;
 }
 digitize2(35231);
+
+// Write a function called repeatStr which repeats the given string string exactly n times.
+
+function repeatStr(n, s) {
+  return s.repeat(n);
+}
+
+repeatStr(2, "ha ");
+console.log(repeatStr(2, "ha "));
