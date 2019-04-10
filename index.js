@@ -244,3 +244,11 @@ function repeatStr(n, s) {
 
 repeatStr(2, "ha ");
 console.log(repeatStr(2, "ha "));
+
+function sumStrings(a, b) {
+  let resSumStrings = Number(a) + Number(b);
+  return String(resSumStrings);
+}
+console.log(sumStrings("7125", "810037"));
+
+sumStrings("7125", "810037");
