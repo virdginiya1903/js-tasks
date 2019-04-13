@@ -279,19 +279,14 @@ correct("51NGAP0RE");
 // Note: if there is nothing to sum, the sum is default to 0.
 
 function positiveSum(arr) {
-  let positiveNum = arr.filter(el => {
-    if (el >= 0) {
-      return true;
-    } else {
-      return false;
-    }
-  });
+  let positiveNum = arr
+    .filter(el => el >= 0)
+    .reduce((res, num) => {
+      return res + num;
+    }, 0);
 
-  let sum = positiveNum.reduce((res, num) => {
-    return res + num;
-  }, 0);
-  return sum;
-  console.log(positiveNum, sum);
+  return positiveNum;
+  console.log(positiveNum);
 }
 
 positiveSum([1, -2, 3, 4, 5]);
