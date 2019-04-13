@@ -271,3 +271,27 @@ function correct(string) {
 }
 correct("PAR15");
 correct("51NGAP0RE");
+
+// You get an array of numbers, return the sum of all of the positives ones.
+
+// Example [1,-4,7,12] => 1 + 7 + 12 = 20
+
+// Note: if there is nothing to sum, the sum is default to 0.
+
+function positiveSum(arr) {
+  let positiveNum = arr.filter(el => {
+    if (el >= 0) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+
+  let sum = positiveNum.reduce((res, num) => {
+    return res + num;
+  }, 0);
+  return sum;
+  console.log(positiveNum, sum);
+}
+
+positiveSum([1, -2, 3, 4, 5]);
