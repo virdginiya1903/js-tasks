@@ -10,7 +10,7 @@
 
 function divisors(integer) {
   let newArr = [];
-  for (var i = 2; i < integer; i++) {
+  for (let i = 2; i < integer; i++) {
     if (integer % i === 0) {
       newArr.push(i);
     }
@@ -64,7 +64,7 @@ descendingOrder(1012);
 
 function divisors(integer) {
   let newArr = [];
-  for (var i = 2; i < integer; i++) {
+  for (let i = 2; i < integer; i++) {
     if (integer % i === 0) {
       newArr.push(i);
     }
@@ -177,7 +177,7 @@ console.log(GetSum(-1, 2));
 console.log(GetSum(5, 2));
 
 function getCount(str) {
-  var vowelsCount = 0;
+  let vowelsCount = 0;
 
   // enter your majic here
 
@@ -284,9 +284,28 @@ function positiveSum(arr) {
     .reduce((res, num) => {
       return res + num;
     }, 0);
-
   return positiveNum;
   console.log(positiveNum);
 }
 
+// Write a function that takes an integer as input, and returns the number of bits that are equal to one
+//  in the binary representation of that number. You can guarantee that input is non-negative.
+
+// Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case
+
 positiveSum([1, -2, 3, 4, 5]);
+let countBits = n => {
+  // Program Me
+  let countBitsRes = n
+    .toString(2)
+    .split("")
+    .map(Number)
+    .filter(el => (el = 1))
+    .reduce((res, num) => {
+      return res + num;
+    }, 0);
+  console.log(countBitsRes);
+  return countBitsRes;
+};
+countBits(4);
+countBits(10);
