@@ -309,3 +309,11 @@ let countBits = n => {
 };
 countBits(4);
 countBits(10);
+
+function invert(array) {
+  let invertRes = array.map(t => t * -1);
+  return invertRes;
+  console.log(invertRes);
+}
+
+invert([1, -2, 3, -4, 5]);
