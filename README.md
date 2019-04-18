@@ -10,3 +10,5 @@ https://www.codewars.com/kata/multiples-of-3-or-5/train/javascript
 https://www.codewars.com/kata/find-the-unique-number-1/train/javascript
 
 https://www.codewars.com/kata/valid-parentheses/train/javascript
+
+https://www.codewars.com/kata/list-filtering/train/javascript
