@@ -17,7 +17,7 @@ https://www.codewars.com/kata/list-filtering/train/javascript
 HEXLET
 
 
-`` `
+```
 // eslint-disable-next-line
 import { cons, car, cdr, toString as pairToString } from '@hexlet/pairs';
 // eslint-disable-next-line
@@ -51,4 +51,4 @@ export const toString = (elements) => {
 
 // END
 
-`` `
+```
