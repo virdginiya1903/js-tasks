@@ -330,3 +330,10 @@ const text = 'Never forget what you are, for surely the world will not';
 console.log(`First: ${text[0]}
 Last: ${text[text.length-1]}`)
 // END
+
+//Реализуйте функцию capitalize, которая приводит первую букву переданного слова к верхнему регистру:
+
+const capitalize = (name)=>  `${name.slice(0,1).toUpperCase()}${name.slice(1)}`
+// console.log(cocapitalize("bbde"))
+// END
+console.log(capitalize("guzel"))
