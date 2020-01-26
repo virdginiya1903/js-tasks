@@ -337,3 +337,18 @@ const capitalize = (name)=>  `${name.slice(0,1).toUpperCase()}${name.slice(1)}`
 // console.log(cocapitalize("bbde"))
 // END
 console.log(capitalize("guzel"))
+
+// Реализуйте функцию getSentenceTone, которая принимает строку и определяет тон предложения. 
+// Если все символы в верхнем регистре, то это вопль — 'scream'. В ином случае — нормальное предложение — 'normal'.
+
+// BEGIN
+const getSentenceTone = (str)=>{
+  const strUp=str.toUpperCase()
+  if (str===strUp) {
+   return 'scream'
+  }
+  return 'normal'
+  } 
+getSentenceTone('Hello'); // normal
+getSentenceTone('WOW');   // scream
+  // END
