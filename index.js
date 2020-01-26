@@ -345,10 +345,26 @@ console.log(capitalize("guzel"))
 const getSentenceTone = (str)=>{
   const strUp=str.toUpperCase()
   if (str===strUp) {
-   return 'scream'
+  return 'scream'
   }
   return 'normal'
   } 
 getSentenceTone('Hello'); // normal
 getSentenceTone('WOW');   // scream
   // END
+  // Реализуйте функцию normalizeUrl, которая выполняет так называемую нормализацию данных. Она принимает адрес сайта и возвращает его с https:// в начале.
+
+// BEGIN
+const normalizeUrl =(str)=>{
+  const http = "http://"
+if (
+  str.startsWith(http)
+){
+    const a = str.substring(http.length)
+    return `https://${a}`
+  }
+  else return `https://${str}`
+}
+console.log(normalizeUrl('google.com')); // 'https://google.com'
+normalizeUrl('http://ai.fi'); // 'https://ai.fi'
+// END
