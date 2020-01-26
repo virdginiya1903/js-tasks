@@ -368,3 +368,18 @@ if (
 console.log(normalizeUrl('google.com')); // 'https://google.com'
 normalizeUrl('http://ai.fi'); // 'https://ai.fi'
 // END
+
+// Реализуйте функцию convertText, которая принимает на вход строку и, если первая буква не заглавная, 
+// возвращает перевернутый вариант исходной строки. Если первая буква заглавная, то строка возвращается без изменений.
+
+
+
+const convertText = (str)=>{
+  const firstLetter = str[0].toUpperCase()
+  const str2 = str.split("").reverse().join("")
+  console.log(firstLetter,str2 )
+    return str[0]===firstLetter ? str : str2
+  }
+console.log(convertText('Hello') )
+console.log(convertText('hello') )
+
