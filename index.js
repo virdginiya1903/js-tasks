@@ -318,75 +318,70 @@ function invert(array) {
 
 invert([1, -2, 3, -4, 5]);
 
-
 // Выведите на экран первую и последнюю букву предложения, записанные в константу text, в следующем формате:
 
 // First: N
 // Last: t
 // Ваша задача извлечь эти символы из строки и вставить в console.log, не используя промежуточные переменные.
-const text = 'Never forget what you are, for surely the world will not';
+const text = "Never forget what you are, for surely the world will not";
 
 // BEGIN
 console.log(`First: ${text[0]}
-Last: ${text[text.length-1]}`)
+Last: ${text[text.length - 1]}`);
 // END
 
 //Реализуйте функцию capitalize, которая приводит первую букву переданного слова к верхнему регистру:
 
-const capitalize = (name)=>  `${name.slice(0,1).toUpperCase()}${name.slice(1)}`
+const capitalize = name => `${name.slice(0, 1).toUpperCase()}${name.slice(1)}`;
 // console.log(cocapitalize("bbde"))
 // END
-console.log(capitalize("guzel"))
+console.log(capitalize("guzel"));
 
-// Реализуйте функцию getSentenceTone, которая принимает строку и определяет тон предложения. 
+// Реализуйте функцию getSentenceTone, которая принимает строку и определяет тон предложения.
 // Если все символы в верхнем регистре, то это вопль — 'scream'. В ином случае — нормальное предложение — 'normal'.
 
 // BEGIN
-const getSentenceTone = (str)=>{
-  const strUp=str.toUpperCase()
-  if (str===strUp) {
-  return 'scream'
+const getSentenceTone = str => {
+  const strUp = str.toUpperCase();
+  if (str === strUp) {
+    return "scream";
   }
-  return 'normal'
-  } 
-getSentenceTone('Hello'); // normal
-getSentenceTone('WOW');   // scream
-  // END
-  // Реализуйте функцию normalizeUrl, которая выполняет так называемую нормализацию данных. Она принимает адрес сайта и возвращает его с https:// в начале.
+  return "normal";
+};
+getSentenceTone("Hello"); // normal
+getSentenceTone("WOW"); // scream
+// END
+// Реализуйте функцию normalizeUrl, которая выполняет так называемую нормализацию данных. Она принимает адрес сайта и возвращает его с https:// в начале.
 
 // BEGIN
-const normalizeUrl =(str)=>{
-  const http = "http://"
-if (
-  str.startsWith(http)
-){
-    const a = str.substring(http.length)
-    return `https://${a}`
-  }
-  else return `https://${str}`
-}
-console.log(normalizeUrl('google.com')); // 'https://google.com'
-normalizeUrl('http://ai.fi'); // 'https://ai.fi'
+const normalizeUrl = str => {
+  const http = "http://";
+  if (str.startsWith(http)) {
+    const a = str.substring(http.length);
+    return `https://${a}`;
+  } else return `https://${str}`;
+};
+console.log(normalizeUrl("google.com")); // 'https://google.com'
+normalizeUrl("http://ai.fi"); // 'https://ai.fi'
 // END
 
-// Реализуйте функцию convertText, которая принимает на вход строку и, если первая буква не заглавная, 
+// Реализуйте функцию convertText, которая принимает на вход строку и, если первая буква не заглавная,
 // возвращает перевернутый вариант исходной строки. Если первая буква заглавная, то строка возвращается без изменений.
 
+const convertText = str => {
+  const firstLetter = str[0].toUpperCase();
+  const str2 = str
+    .split("")
+    .reverse()
+    .join("");
+  console.log(firstLetter, str2);
+  return str[0] === firstLetter ? str : str2;
+};
+console.log(convertText("Hello"));
+console.log(convertText("hello"));
 
-
-const convertText = (str)=>{
-  const firstLetter = str[0].toUpperCase()
-  const str2 = str.split("").reverse().join("")
-  console.log(firstLetter,str2 )
-    return str[0]===firstLetter ? str : str2
-  }
-console.log(convertText('Hello') )
-console.log(convertText('hello') )
-
-
-
-const w =(num)=>{
-  num1= num.replace(/^(.{6})([0-9, ]{8})/, '$1********')
-  console.log(num2)
-}
-w("1234123412341234")
+const w = num => {
+  num1 = num.replace(/^(.{6})([0-9, ]{8})/, "$1********");
+  console.log(num2);
+};
+w("1234123412341234");
