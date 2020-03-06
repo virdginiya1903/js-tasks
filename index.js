@@ -383,3 +383,10 @@ const convertText = (str)=>{
 console.log(convertText('Hello') )
 console.log(convertText('hello') )
 
+
+
+const w =(num)=>{
+  num1= num.replace(/^(.{6})([0-9, ]{8})/, '$1********')
+  console.log(num2)
+}
+w("1234123412341234")
