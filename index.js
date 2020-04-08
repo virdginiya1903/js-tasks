@@ -39,12 +39,7 @@ divisors(25);
 function descendingOrder(n) {
   //...
 
-  let a = n
-    .toString()
-    .split("")
-    .sort()
-    .reverse()
-    .join("");
+  let a = n.toString().split("").sort().reverse().join("");
   let b = Number(a);
   console.log(n, a, b);
   return b;
@@ -93,12 +88,7 @@ divisors(25);
 function descendingOrder(n) {
   //...
 
-  let a = n
-    .toString()
-    .split("")
-    .sort()
-    .reverse()
-    .join("");
+  let a = n.toString().split("").sort().reverse().join("");
   let b = Number(a);
   console.log(n, a, b);
   return b;
@@ -195,7 +185,7 @@ function getCount(str) {
   let getCountArrB = [...str];
   // enter your majic here
   // console.log(getCountArrB);
-  let arrRes = getCountArrB.filter(it => getCountArrA.includes(it));
+  let arrRes = getCountArrB.filter((it) => getCountArrA.includes(it));
   // return vowelsCount;
   // console.log(arrRes);
   vowelsCount = arrRes.length;
@@ -226,11 +216,7 @@ digitize(35231);
 // второй вариант более продвинутый и легкий
 
 function digitize2(n) {
-  let digitizeRes = n
-    .toString()
-    .split("")
-    .reverse()
-    .map(Number);
+  let digitizeRes = n.toString().split("").reverse().map(Number);
   console.log(digitizeRes);
   return digitizeRes;
 }
@@ -264,10 +250,7 @@ function sumStrings(a, b) {
 
 function correct(string) {
   // your code here
-  return string
-    .replace(/5/g, "S")
-    .replace(/0/g, "O")
-    .replace(/1/g, "I");
+  return string.replace(/5/g, "S").replace(/0/g, "O").replace(/1/g, "I");
 }
 correct("PAR15");
 correct("51NGAP0RE");
@@ -280,7 +263,7 @@ correct("51NGAP0RE");
 
 function positiveSum(arr) {
   let positiveNum = arr
-    .filter(el => el >= 0)
+    .filter((el) => el >= 0)
     .reduce((res, num) => {
       return res + num;
     }, 0);
@@ -294,13 +277,13 @@ function positiveSum(arr) {
 // Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case
 
 positiveSum([1, -2, 3, 4, 5]);
-let countBits = n => {
+let countBits = (n) => {
   // Program Me
   let countBitsRes = n
     .toString(2)
     .split("")
     .map(Number)
-    .filter(el => (el = 1))
+    .filter((el) => (el = 1))
     .reduce((res, num) => {
       return res + num;
     }, 0);
@@ -311,7 +294,7 @@ countBits(4);
 countBits(10);
 
 function invert(array) {
-  let invertRes = array.map(t => t * -1);
+  let invertRes = array.map((t) => t * -1);
   return invertRes;
   console.log(invertRes);
 }
@@ -332,7 +315,8 @@ Last: ${text[text.length - 1]}`);
 
 //Реализуйте функцию capitalize, которая приводит первую букву переданного слова к верхнему регистру:
 
-const capitalize = name => `${name.slice(0, 1).toUpperCase()}${name.slice(1)}`;
+const capitalize = (name) =>
+  `${name.slice(0, 1).toUpperCase()}${name.slice(1)}`;
 // console.log(cocapitalize("bbde"))
 // END
 console.log(capitalize("guzel"));
@@ -341,7 +325,7 @@ console.log(capitalize("guzel"));
 // Если все символы в верхнем регистре, то это вопль — 'scream'. В ином случае — нормальное предложение — 'normal'.
 
 // BEGIN
-const getSentenceTone = str => {
+const getSentenceTone = (str) => {
   const strUp = str.toUpperCase();
   if (str === strUp) {
     return "scream";
@@ -354,7 +338,7 @@ getSentenceTone("WOW"); // scream
 // Реализуйте функцию normalizeUrl, которая выполняет так называемую нормализацию данных. Она принимает адрес сайта и возвращает его с https:// в начале.
 
 // BEGIN
-const normalizeUrl = str => {
+const normalizeUrl = (str) => {
   const http = "http://";
   if (str.startsWith(http)) {
     const a = str.substring(http.length);
@@ -368,19 +352,16 @@ normalizeUrl("http://ai.fi"); // 'https://ai.fi'
 // Реализуйте функцию convertText, которая принимает на вход строку и, если первая буква не заглавная,
 // возвращает перевернутый вариант исходной строки. Если первая буква заглавная, то строка возвращается без изменений.
 
-const convertText = str => {
+const convertText = (str) => {
   const firstLetter = str[0].toUpperCase();
-  const str2 = str
-    .split("")
-    .reverse()
-    .join("");
+  const str2 = str.split("").reverse().join("");
   console.log(firstLetter, str2);
   return str[0] === firstLetter ? str : str2;
 };
 console.log(convertText("Hello"));
 console.log(convertText("hello"));
 
-const w = num => {
+const w = (num) => {
   num1 = num.replace(/^(.{6})([0-9, ]{8})/, "$1********");
   console.log(num2);
 };
