@@ -51,9 +51,5 @@ Array.prototype.multBy = function (num) {
 };
 console.log(arr.multBy(6)); // можем расширять все объекты
 
-const multByArr = (array, num) => {
-  return array.map((el) => {
-    return el * num;
-  });
-};
+const multByArr = (array, num) => array.map((el) => el * num);
 console.log(multByArr(arr, 5));
