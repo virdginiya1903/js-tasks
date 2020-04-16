@@ -18,3 +18,23 @@ const createCalcFunc = (n) => {
 };
 const calc = createCalcFunc(55);
 calc();
+
+const createInc = (n) => {
+  return (num) => n + num;
+};
+const addOne = createInc(1);
+console.log(addOne(5));
+console.log(addOne(55));
+
+const addTen = createInc(10);
+console.log(addTen(5));
+console.log(addTen(55));
+
+const urlGenerator = (domain) => {
+  return (url) => `https://${url}.${domain}`;
+};
+const urlRu = urlGenerator("ru");
+const urlCom = urlGenerator("com");
+
+console.log(urlRu("ya"));
+console.log(urlCom("github"));
