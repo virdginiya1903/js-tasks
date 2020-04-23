@@ -1,26 +1,26 @@
 console.log("promise.js");
 
-console.group("Асинхронность и колбеки");
-// Эмуляция работы с сервером через  асинхронность и через колбеки
+// console.group("Асинхронность и колбеки");
+// // Эмуляция работы с сервером через  асинхронность и через колбеки
 
-console.log("Request data..."); // делаем асинхронный запрос на сервер
+// console.log("Request data..."); // делаем асинхронный запрос на сервер
 
-setTimeout(() => {
-  console.log("Preparing data..."); // готовим данные, сервер делает запрос
-  // с backend-а получим константу backendData
-  const backendData = {
-    server: "aws",
-    port: 2000,
-    status: "working",
-  };
-  // симулируем асинхронность
-  setTimeout(() => {
-    backendData.modified = true; // добавили новый ключ
-    console.log("Data received", backendData); // data была получена
-  }, 2000);
-}, 2000);
-// много вложенности - это минус
-console.groupEnd();
+// setTimeout(() => {
+//   console.log("Preparing data..."); // готовим данные, сервер делает запрос
+//   // с backend-а получим константу backendData
+//   const backendData = {
+//     server: "aws",
+//     port: 2000,
+//     status: "working",
+//   };
+//   // симулируем асинхронность
+//   setTimeout(() => {
+//     backendData.modified = true; // добавили новый ключ
+//     console.log("Data received", backendData); // data была получена
+//   }, 2000);
+// }, 2000);
+// // много вложенности - это минус
+// console.groupEnd();
 
 //Промисы пришли, чтобы решить данную задачу и упростить  работу с асинхронными операциями
 //как промисы работают: создаем новую константу, туда записываем глобальный клас Promise, в конструктор
@@ -73,25 +73,25 @@ p.then((data) => {
 // мы сообщили промису, что он завершился  resolve() и был вызван метод then()
 // прелестьпромисов, что только один уровень вложенности, нет колбэков внутри колбэков
 
-const sleep = (ms) => {
-  return new Promise((resolve) =>
-    setTimeout(() => {
-      resolve();
-    }, ms)
-  );
-};
+// const sleep = (ms) => {
+//   return new Promise((resolve) =>
+//     setTimeout(() => {
+//       resolve();
+//     }, ms)
+//   );
+// };
 
-sleep(5000).then(() => {
-  console.log("After 5 sec");
-});
-sleep(7000).then(() => {
-  console.log("After 7 sec");
-});
+// sleep(5000).then(() => {
+//   console.log("After 5 sec");
+// });
+// sleep(7000).then(() => {
+//   console.log("After 7 sec");
+// });
 
-Promise.all([sleep(7000), sleep(9000)]).then(() => {
-  console.log("All promises"); //данный промис будет выполнен только тогда, когда завершаться все промисы в массиве
-});
+// Promise.all([sleep(7000), sleep(9000)]).then(() => {
+//   console.log("All promises"); //данный промис будет выполнен только тогда, когда завершаться все промисы в массиве
+// });
 
-Promise.race([sleep(7000), sleep(9000)]).then(() => {
-  console.log("Race promises"); //данный промис будет выполнен только тогда, когда завершится первый промис
-});
+// Promise.race([sleep(7000), sleep(9000)]).then(() => {
+//   console.log("Race promises"); //данный промис будет выполнен только тогда, когда завершится первый промис
+// });
