@@ -7,5 +7,7 @@ setTimeout(() => {
 setTimeout(() => {
   console.log("settimeout 0");
 }, 0);
-
+setTimeout(() => {
+  console.log("settimeout 0");
+});
 console.log("end");
